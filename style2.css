@@ -1,27 +1,27 @@
 
 
 body{
-       /*background-image:url("../images/fondo-rayado4.png");*/
        background-color: white;
+       cursor: default;
        background-size: cover;
        min-height: 60vh;
        background-repeat: no-repeat;
        background-position: center center;
-       
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
        box-sizing: border-box;
 }
        
-/* estilos de las navbar */
+/*Estos son los estilos de las navbar */ 
 .navbar.navbar-expand-lg.bg-secondary{
-
-       background: rgb(171,152,122);
-       background: -moz-linear-gradient(90deg, rgba(171,152,122,1) 42%, rgba(245,249,250,1) 100%);
-       background: -webkit-linear-gradient(90deg, rgba(171,152,122,1) 42%, rgba(245,249,250,1) 100%);
-       background: linear-gradient(90deg, rgba(171,152,122,1) 42%, rgba(245,249,250,1) 100%);
-       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ab987a",endColorstr="#f5f9fa",GradientType=1);
-       color: #000;
+       background: rgb(194,24,91);
+       background: -moz-linear-gradient(90deg, rgba(194,24,91,1) 33%, rgba(248,187,208,1) 100%);
+       background: -webkit-linear-gradient(90deg, rgba(194,24,91,1) 33%, rgba(248,187,208,1) 100%);
+       background: linear-gradient(90deg, rgba(194,24,91,1) 33%, rgba(248,187,208,1) 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c2185b",endColorstr="#f8bbd0",GradientType=1);
+       
+       text-shadow: 2px 2px 2px rgba(255, 253, 253, 0.2) ;
 } 
-      
+   
 .collapse.navbar-collapse{
        margin-left: 200px;
 }
@@ -31,18 +31,31 @@ body{
 }
 .menu-item{
        margin-left: 100px;
+       color: black;
+}
+.list-group-item{
+       background-color: transparent;
+       border-color: transparent;
 }
 
-/* estos son los estilos del banner*/
+ /*Estos son los estilos del banner */ 
 .banner{
        background-size: cover;
-       min-height: 60vh;
+       min-height: 100vh;
        position: relative;
        color: white;
        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) ;
+       text-align: center;
+       padding: 0%;
+       width: 100%;
 } 
-h1{
+h1.intro{ 
        font-size: 4rem;
+       color:   rgb(194,24,91);
+}
+h4.intro{
+       padding-top: 15%;
+
 }
 .color-overlay{
        position: absolute;
@@ -51,33 +64,104 @@ h1{
        background-color: rgba(0, 0, 0, 0.2);
 }
 
+/*Estos son los estilos de los espacios intermedios con frases motivadoras */
+.internedio{
+       height: 50%; 
+       background-color: antiquewhite;
+}
+.texto{
+       margin-top: 5rem;
+       margin-bottom: 5rem;
+       text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) ;   
+       text-align: center;
+} 
+
+
+
  /*Estos son los estilos de los artículos */ 
-.row{
+#acerca-de-mi{
+       display: flex;
+       flex-wrap: wrap;
+}
+
+ .row{
        background-size: cover;
-       background-color: #000;
-       color: rgb(246, 248, 250);
+       background-color: white;
+       color: rgb(0, 0, 0);
+       margin: 0px;
+           
 }
-.card.mb-3.primera{
-       margin-top: 100px;
-}
-
-.card.mb-3.segunda{
-       margin-top: 200px;
-       
-}
-
-
-
-
-       
-
 .card-img-top{
        -webkit-border-radius: 0;
        -moz-border-radius: 0;
        border-radius: 0;
 }
-
-
+.card.mb-3{
+       height: 25%;
+       -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+       border-radius: 0;
+       margin: 0px;
+       padding: 0px;       
+}
+.card-title{
+       text-align: center;
+}
+.card-text{
+       text-align: justify;      
+}
+.boton{
+       text-align: center;
+}
+.fila2{
+       border: 1px solid white;
+       background-color: rgb(187, 186, 186);
+}
+.presentacion{
+       padding-top: 3%;
+}
+/*Estos son los estilos de los artículos */ 
+/*.img-fluid{
+       object-fit: cover;
+       width: 100%;
+       height: 100%;
+}*/
+.pequeño{
+       margin-left: 3rem;
+       margin-right: 3rem;
+       margin-top: 4rem;
+       margin-bottom: 4rem;
+}  
+#small-quote{
+       background-color: #9198a0;
+       color: black;
+       text-shadow: 2px 2px 2px rgb(255, 255, 255) ;
+} 
+.centered{
+       text-align: center;
+}
+/*Estos son los estilos de los modales */
+.titulo{
+       padding-bottom: 5%;
+}
+.modal-content, .modal-footer{       
+       border-width: 0px;
+}
+#acercaDeMi{
+       background-color: #9198a0;
+}  
+#experiencia{
+       background-color: #f78be0;
+} 
+#educacion{
+       background-color: #86359c;
+} 
+#habilidades{
+       background-color: #d689e9;
+}
+#proyectos{
+       background-color: #bb1658;
+}   
 
 
 /*Estos son los estilos del footer */ 
@@ -86,21 +170,63 @@ h1{
        margin-right: 20px;
 }
 .pie-pagina{
-       /*margin-left: 80px;*/
       clear: both;
-      width: 100%;
-      margin-top: 300px;
-      
-  margin-bottom: 10px;
-  
-  
-    
-       
+      width: 100%; 
+      height: 6rem;
 }
 .copywrite{
        margin-top: 5px;
+       color: black;
+       font-size: 1rem;
+       
 }
- 
+/*Estos son los estilos del login html */ 
+.ingreso{
+       padding-top: 10%;
+       padding-left: 30%;
+       padding-right: 30%;
+       
+}
+.login{
+       padding-left: 17%;
+      
+}
+.modal-dialog{
+       background-color: white;
+       color: black;
+       border-radius: 2%;
+}
 
-
-    
+/*estos son los estilos del dashboard*/
+.unlocked{
+       margin-left: 70%;
+}
+h3.intro-dashboard{
+       margin-top: 18%;
+}
+.dashfooter{
+       
+       margin-left: 75%;
+}
+.container.text-center{
+       padding: 0%;
+       margin: 0%;
+}
+.dashbar{
+       background-color: white;
+       border-radius: 0%;
+       padding-left: 0%;
+       
+}
+.col-2{
+       padding: 0%;
+}
+.primero{
+       padding-top: 20%;
+}
+.ultimo{
+       padding-bottom: 20%;
+}
+ h6.instrucciones{
+       padding-top: 5%;
+ }   
