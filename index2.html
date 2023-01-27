@@ -15,11 +15,13 @@
 </head>
 <body>
 
+  
 <!-- Esta es la primera navbar con las redes, el login y la selección del lenguaje -->
   <nav class="navbar navbar-expand-lg bg-secondary">
+    
         <div class="container-fluid">
 <!-- Acá va el logo de argentina programa -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" name="volver" href="#"> 
                 <img src="assets/images/APLogo-20-20.png" alt="logo Argentina Programa"width="20%" height="">
             </a>
 <!-- Esto es el menú responsive que colapsa -->             
@@ -28,53 +30,72 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!-- Esta es la lista desordenada de items de la navbar -->            
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group list-group-horizontal">
 <!-- Acá va el logo de linked in -->              
-              <li class="nav-item">
-                  <a class="nav-link" href="#">
+              <li class="nav-item list-group-item">                
+                  <a class="nav-link" href="https://www.linkedin.com/in/roxana-palacio-35288723/" target="_blank">
                       <i class="fa-brands fa-linkedin fa-2xl"></i>
                   </a>
               </li>
 <!--  Acá va el icono de email-->               
-              <li class="nav-item">               
+              <li class="nav-item list-group-item"> 
                 <a class="nav-link" href="#">
-                  <i class="fa-solid fa-envelope fa-2xl"></i>   
+                  <!-- Button trigger modal contacto-->
+                  <i data-bs-toggle="modal" data-bs-target="#contactoModal" class="fa-solid fa-envelope fa-2xl"></i>           
                 </a>
               </li>
               
 <!-- Acá va el selector de lenguaje  -->             
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown list-group-item">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       <strong>Language</strong>                      
+                       <strong>Idioma</strong>                      
                       </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Español</a></li>
-                  <li><a class="dropdown-item" href="#">Inglés</a></li>                  
+                <!-- por default está en español, entonces acá sólo debe verse el botón ENGLISH  -->   
+                  <!-- <li><a class="dropdown-item" href="#">Español</a></li> -->
+                  <li><a class="dropdown-item" href="#">English</a></li>                  
                 </ul>
               </li>
-<!-- Acá va el icono de user unlocked  --> 
-              <li class="nav-item">               
-                <a class="nav-link" href="#">
-                  <i class="fa-solid fa-lock-open fa-xl"></i>
-                </a>
-            </li> 
+
 <!-- Acá va el icono de login user locked  --> 
-              <li class="nav-item">
-                  <a class="nav-link" href="#">
-                  <i class="fa-solid fa-lock fa-xl"></i>
+              <li class="nav-item list-group-item">               
+                  <a class="nav-link" href="login.html">
+        <!-- Button trigger modal-->
+                    <i data-bs-toggle="modal" data-bs-target="#loginModal" class="fa-solid fa-lock fa-2xl"></i>   
                   </a>
-              </li>
+              </li>                               
             </ul> 
           </div>
         </div>
   </nav>
-
-<!-- Este es el banner superior -->   
-<div class="banner" style="background-image: url('./assets/images/birds-red.jpg');">
-  <div class="color-overlay d-flex justify-content-center align-items-center">
-      <h1>¡Hola! Soy Roxy-B</h1>
+  
+<!-- Modal contacto -->
+<!-- Modal -->
+<div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Contacto</h1>
+      </div>
+      <div class="modal-body">
+        blabla@gmai.com
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Este es el banner superior --> 
+<div class="banner img-fluid" style="background-image: url('./assets/images/fondo1.jpg');"> 
+  <div class="color-overlay justify-content-center align-items-center">
+      <p><h4 class="intro">¡Hola! Soy</h4></p>
+      <p><h1 class="intro">Roxy-B</h1></p>     
+      <p><h3 class="intro">Desarolladora Web Full Stack Jr</h3></p>
+  </div>
+</div>
+
 
 <!-- esta es la segunda navbar -->  
   <nav class="navbar navbar-expand-lg bg-secondary">
@@ -88,93 +109,337 @@
 <!-- Esta es la lista desordenada de items de la navbar con un alineación distinta -->
         <ul class="navbar-nav me-auto  mb-2 mb-lg-0" >
           <li class="nav-item">
-            <a class="nav-link" href="#"><strong>Acerca de mí</strong> </a>              
+            <a class="nav-link" href="#acerca-de-mi"><strong>Acerca de mí</strong> </a>              
           </li>
           <li class="nav-item menu-item">
-            <a class="nav-link" href="#"><strong>Experiencia</strong></a>            
+            <a class="nav-link" href="#experiencia"><strong>Experiencia</strong></a>            
           </li>
           <li class="nav-item menu-item">
-            <a class="nav-link" href="#"><strong> Educación</strong></a>            
+            <a class="nav-link" href="#educacion"><strong> Educación</strong></a>            
           </li>
           <li class="nav-item menu-item">
-            <a class="nav-link" href="#"><strong>Habilidades</strong></a>            
+            <a class="nav-link" href="#habilidades"><strong>Habilidades</strong></a>            
           </li>
           <li class="nav-item menu-item">            
-            <a class="nav-link" href="#"><strong> Proyectos</strong></a>            
+            <a class="nav-link" href="#proyectos"><strong> Proyectos</strong></a>            
           </li>
         </ul>          
           
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Palabras Clave" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <button class="btn btn-dark" type="submit">Buscar</button>
         </form>
       </div>
     </div>
   </nav>
 
+
+<!-- esta es la primera frase intermedia --> 
+<div class="intermedio">
+  <div class="texto">
+    <p><i><strong>"Siempre estoy haciendo lo que no puedo hacer para poder aprender cómo hacerlo"</strong></i></p>
+    <p>-Pablo Picasso-</p>
+  </div>
+</div> 
+
+
+<!-- estos son los artículos   -->
+  <span class="card mb-3 fila2" style="max-width: 1565px;">
+<!-- esta es la primera fila de artículos  --> 
+ 
+    <div class="row g-0" id="acerca-de-mi">
+      <div class="col-md-3 ">
+          <img src="assets/images/foto de perfil.jpg" class="img-fluid" alt="foto de perfil">
+      </div>
+      <div class="col-md-6 fila2">
+        <div class="card-body">
+          <a name="acerca-de-mi"></a>
+          <h5 class="card-title presentacion"><strong>Acerca de mí</strong></h5>
+          <p class="card-text presentacion">Soy Roxana Palacio (Roxy-B) y soy una emprendedora multidisciplinaria en gran parte autodidacta. Trabajé en Diseño Gráfico y Editorial y ahora estoy incursionando en el Diseño y Desarrollo Web.</p>
+            <div class="boton presentacion"> 
+              <!-- Button trigger modal -->
+              <i data-bs-toggle="modal" data-bs-target="#infoModal" class="btn btn-dark">+ Info</i>                    
+            </div>
+        </div>
+      </div>
+      <div class="col-md-3" id="small-quote">        
+        <div class="texto pequeño">
+          <p><i><strong>“La actitud es una pequeña cosa que marca una gran diferencia”</strong></i></p>
+          <p>-Winston Churchill-</p>
+        </div> 
+      </div> 
+    </div> 
   
-
-<!-- esta es la primera fila de artículos -->  
-  <span class="card mb-3 primera" style="max-width: 1565px;">
+<!-- esta es la segunda fila de artículos -->     
     <div class="row g-0">
-      <div class="col-md-3">
-        <img src="assets/images/GEDC4388bis.JPG" class="img-fluid start" alt="foto de perfil">
-      </div>
-      <div class="col-md-6">
+      <div class="col-md-3 fila2">
+        <img src="./assets/images/experiencia.jpg" class="card-img-top" alt="imagen Experiencia">
         <div class="card-body">
-          <h5 class="card-title">Acerca de mí</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <img src="assets/images/GEDC4388bis.JPG" class="img-fluid start" alt="foto de perfil">
-      </div>
-    </div>
-  </span>
-
-<!-- Acá tengo que insertar un texto con una frase inspiradora centrada en cursiva -->
-  
-
-<!-- esta es la segunda fila de artículos -->    
-  <span class="card mb-3 segunda" style="max-width: 1565px;">
-    <div class="row g-0">
-      <div class="col-md-3">
-        <img src="assets/images/GEDC4388bis.JPG" class="card-img-top" alt="imagenes botones coleccionables">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          
+          <a name="experiencia"></a>
+          <h5 class="card-title"><strong>Experiencia</strong></h5>
+          <div class="boton">--> 
+             <!-- Button trigger modal-->
+             <i data-bs-toggle="modal" data-bs-target="#experienciaModal" class="btn btn-dark">+ Info</i>  
+          </div>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <img src="assets/images/GEDC4388bis.JPG" class="card-img-top" alt="imagenes botones coleccionables">
+      <div class="col-md-3 fila2">
+        <img src="./assets/images/Educacion.jpg" class="card-img-top" alt="imagen Educación">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a name="educacion"></a>
+          <h5 class="card-title"><strong>Educación</strong></h5>
+          <div class="boton">-->
+             <!-- Button trigger modal-->
+             <i data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-dark">+ Info</i>  
+          </div>
         </div>
       </div>
 
-      <div class="col-md-3">
-        <img src="assets/images/GEDC4388bis.JPG" class="card-img-top" alt="imagenes botones coleccionables">
+      <div class="col-md-3 fila2">
+        <img src="./assets/images/habilidades.jpg" class="card-img-top" alt="imagen Habilidades">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a name="habilidades"></a>
+          <h5 class="card-title"><strong>Habilidades</strong></h5>
+          <div class="boton">
+             <!-- Button trigger modal-->
+             <i data-bs-toggle="modal" data-bs-target="#habilidadesModal" class="btn btn-dark">+ Info</i>  
+          </div>
         </div>
       </div>
     
-      <div class="col-md-3">
-          <img src="assets/images/GEDC4388bis.JPG" class="card-img-top" alt="imagenes botones coleccionables">
+      <div class="col-md-3 fila2">
+        <img src="./assets/images/proyectos.jpg" class="card-img-top" alt="imagen Proyectos">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a name="proyectos"></a>
+          <h5 class="card-title"><strong>Proyectos</strong></h5>
+          <div class="boton">-->
+             <!-- Button trigger modal-->
+             <i data-bs-toggle="modal" data-bs-target="#proyectosModal" class="btn btn-dark">+ Info</i>  
+          </div>
         </div>
-      </div>
+      </div> 
+
     </div>
   </span>
-  
+
+  <!-- Modal Acerca de mi-->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" id="acercaDeMi">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Más sobre mí</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       Estudié carreras tan discímiles como <i>Cs.Físicas y Diseño de Indumentaria y Textil</i>. Descubrí que me apasionaban otras cosas y decidí seguirlas adonde quiera que me llevaran. Trabajé en una revista de Heavy Metal (<i>Madhouse</i>)y más tarde creé mi propia revista del mismo estilo (<i>Requiem</i>), ambas con distribución en todo el territorio Argentino. Luego creé la versión digital de la misma en una época en la que lo digital no era tan cotidiano. Como Directora de <i>Requiem</i> coordiné equipos de colaboradores en todos los continentes. Produje un programa de radio, diseñé y edité varios libros, pinté, dibujé, fui fotógrafa y descubrí el scrpabooking.
+       Impulsada por mi energía y entusiasmo me inspiro fácilmente y continúo desafiándome a mí misma, aprendiendo, estudiando y creando. Soy apasionada, detallista,
+       expresiva, intuitiva, alegre, sociable, responsable y soñadora. El desarrollo web me permite potenciar mi creatividad.
+      </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Experiencia-->
+ <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" id="experiencia">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Experiencia</strong></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li><strong>Ed.Llamoso SRL Revista Madhouse/Revista Epopeya</strong>
+            <ul>  
+              <li><i>1991-1995</i> Ejecutiva de Ventas y Publicidad</li>
+              <li><i>1995-2001</i> Asistente de Dirección</li>          
+            </ul>
+          </li><br>
+          <li><strong>Ave César (programa de radio)</strong>
+            <ul>
+              <li><i>2001-2005</i> Asistente de Producción</li>
+              <li><i>2005-2010</i> Productora</li> 
+            </ul>
+          </li><br>
+          <li><strong>Ediorial RP Revista Requiem</strong>
+            <ul><li> <i>2003-2012</i> Socia/Editora/Co-directora</li></ul>
+          </li><br>
+          <li><strong>Adrián Barilari(cantante)</strong>
+            <ul><li><si>2008-2010</i> Agente de prensa</li></ul>          
+          </li><br>
+          <li><strong>Farmacia Fleming</strong>
+            <ul><li><i>2008</i> en adelante Socia-Gerente</li></ul>
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>  
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Educación-->
+ <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" id="educacion">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><strong> Educación</h1></strong>
+      </div>
+      <div class="modal-body">
+       <ul>
+        <li><strong>1984-1989</strong> <i>Instituto Santa María de los Ángeles</i> Título Bachillerato Mercantil- Completo</li>
+        <li><strong>1990-1996</strong> <i>UBA</i> Licenciatura en Cs.Físicas- Incompleto</li>
+        <li><strong>1998-2003</strong> <i>UBA</i> Diseño de Indumentaria/Diseño Textil- Incompleto</li>
+        <li><strong>2003</strong> en adelante Estudiante autodidacta en diversas disciplinas</li>
+        <li><strong>2020</strong> <i>Capacitarte.org</i> Auxiliar de Farmacia- Completo</li>
+        <li><strong>2022</strong> <i>Argentina Programa</i> Sé Programar- Completo</li>
+        <li><strong>2022</strong> <i>ONE Oracle Next Education/Alura Latam</i> G4 Principiante en Programación- Completo</li>
+        <li><strong>2022-2023</strong> <i>Argentina Programa</i> Yo Programo En Curso</li>
+        <li><strong>2023</strong> <i>ONE Oracle Next Education/Alura Latam</i> G4 ??? En Curso</li> 
+       </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>  
+      </div>
+  </div>
+  </div>
+</div>
+<!-- Modal Habilidades-->
+<div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-scrollable"> 
+    <div class="modal-content"> 
+      <div class="modal-header" id="habilidades">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><strong> Habilidades</h1></strong>
+      </div>     
+      <div class="modal-body">
+        <div class="titulo">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Habilidades Técnicas</h1>
+        </div>
+        <!-- 1era barra de progreso con su título-->
+        <div class="row-progress">
+          <div class="col mb-3">
+           <h6><strong>HTML5</STRONg></h6> 
+          </div>
+          <div class="progress mb-3">
+           <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      
+        <!-- 2da barra de progreso con su título-->
+        <div class="row-progress">
+          <div class="col mb-3">
+           <h6><strong>CSS3</strong></h6> 
+          </div>
+          <div class="progress mb-3">
+           <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+
+        <!-- 3ea barra de progreso con su título-->
+        <div class="row-progress">
+          <div class="col mb-3">
+           <h6><strong>JAVASCRIPT</strong> </h6> 
+          </div>
+          <div class="progress mb-3">
+           <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+
+        <!-- 4ta barra de progreso con su título-->
+        <div class="row-progress">
+          <div class="col mb-3">
+           <h6><strong>ANGULAR</strong></h6> 
+          </div>
+          <div class="progress mb-3">
+           <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+
+        <!-- 5ta barra de progreso con su título-->
+        <div class="row-progress">
+          <div class="col mb-3">
+           <h6><strong>JAVA</strong></h6> 
+          </div>
+          <div class="progress mb-3">
+           <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+
+        <!-- 6ta barra de progreso con su título-->
+        <div class="row-progress">
+          <div class="col mb-3">
+           <h6><strong>SPRING BOOT</strong></h6> 
+          </div>
+          <div class="progress mb-3">
+           <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+
+        <!-- Acá van las habilidades de diseño-->
+        <div class="titulo">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Habilidades de Diseño</h1>
+        </div>
+          <!-- Acá va una imagen con un collage de palabras-->
+          <img src="./assets/images/habilidades.jpg" alt="">
+
+        <!-- Acá van las habilidades de diseño-->
+        <div class="titulo">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Habilidades Blandas</h1>
+        </div>
+          <!-- Acá va una imagen con un collage de palabras-->
+        <img src="./assets/images/foto de perfil.jpg" alt="">
+      </div>  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> 
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Modal Proyectos-->
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header" id="proyectos">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Proyectos</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <span>
+          <div class="imagen-proyecto">
+            <img src="" alt="Farmacia Fleming Web">
+          </div>
+          <div class="texto-proyecto">
+            <p>Farmacia Fleming Web: página para e-commerce hecha con HTML, CSS, JAVASCRIPT,ANGULAR,JAVA, MSQL, SPRINGBOOT</p>
+          </div>
+        </span>
+        <span>
+          <div class="imagen-proyecto">
+            <img src="" alt="Entre Amigas Web">
+          </div>
+          <div class="texto-proyecto">
+            <p>Enre Amigas Web: página para e-commerce hecha con HTML, CSS, JAVASCRIPT,ANGULAR,JAVA, MSQL, SPRINGBOOT</p>
+          </div>
+        </span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>       
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<!-- Acá tengo que insertar OTRO texto con una frase inspiradora centrada en cursiva -->
-
-
-
+<!-- esta es la segunda frase intermedia -->  
+<div class="intermedio">
+  <div class="texto">
+    <p><i><strong>“La única forma de descubrir los límites de lo posible, es aventurarse un poco más allá de ellos hacia lo imposible”</strong></i></p>
+    <p>-Arthur C. Clarke-</p>
+  </div>
+</div> 
 
 
 <!-- Este es el pie de página -->
@@ -191,9 +456,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <!-- Esta es la lista desordenada de items del footer con un alineación distinta -->
             <ul class="navbar-nav me-auto  mb-2 mb-lg-0 footer" >
-              <li class="botones-inferiores"><button type="button" class="btn btn-secondary">Volver al inicio</button> </li>
-              <li class="botones-inferiores"><button type="button" class="btn btn-secondary">Descargar PDF</button></li>
-              <li class="botones-inferiores"><button type="button" class="btn btn-secondary">Suscribirme</button></li>
+              <li class="botones-inferiores"><a href="#volver"class="btn btn-dark" role="button">Volver al inicio</a></li>
+              <li class="botones-inferiores">
+                <a href="./assets/docs/documento-prueba.pdf" class="btn btn-dark" download="CVRoxyPalacio">Descargar PDF</a></li>
+              <li class="botones-inferiores">
+                <!-- Button trigger modal-->
+                <i data-bs-toggle="modal" data-bs-target="#novedadesModal" class="btn btn-dark">Suscribirme </i></li>    
             </ul>
 <!-- acá va el copywrite -->          
           <blockquote class="blockquote mb-0">
@@ -203,8 +471,33 @@
       </div>
     </nav>
   </footer>
-      
-   
+
+<!-- Modal Novedades-->
+<div class="modal fade" id="novedadesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 centered" id="exampleModalLabel">Si querés recibir novedades sobres mis proyectos dejame tu email</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <!--Formulario de ingreso de mail -->
+       <form>
+        <div class="mb-3">
+          <!--input email -->
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>       
+      </div>
+  </div>
+  </div>
+</div>      
+
+
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> 
 
