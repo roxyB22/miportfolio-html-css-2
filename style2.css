@@ -18,24 +18,24 @@ body{
        background: -webkit-linear-gradient(90deg, rgba(194,24,91,1) 33%, rgba(248,187,208,1) 100%);
        background: linear-gradient(90deg, rgba(194,24,91,1) 33%, rgba(248,187,208,1) 100%);
        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c2185b",endColorstr="#f8bbd0",GradientType=1);
-       
+       flex-wrap: wrap;
        text-shadow: 2px 2px 2px rgba(255, 253, 253, 0.2) ;
 } 
    
-.collapse.navbar-collapse{
-       margin-left: 200px;
-}
-       
-.collapse.navbar-collapse.menu{
+.collapse, .navbar-collapse{
+       margin-right: 1rem;      
+}    
+/*.collapse.navbar-collapse.menu{
         margin-left: 0px;
-}
+}*/
 .menu-item{
-       margin-left: 100px;
+       margin-left: 7rem;
        color: black;
 }
 .list-group-item{
        background-color: transparent;
        border-color: transparent;
+       
 }
 
  /*Estos son los estilos del banner */ 
@@ -79,11 +79,6 @@ h4.intro{
 
 
  /*Estos son los estilos de los artículos */ 
-#acerca-de-mi{
-       display: flex;
-       flex-wrap: wrap;
-}
-
  .row{
        background-size: cover;
        background-color: white;
@@ -120,12 +115,12 @@ h4.intro{
 .presentacion{
        padding-top: 3%;
 }
-/*Estos son los estilos de los artículos */ 
-/*.img-fluid{
+
+.img-fluid{
        object-fit: cover;
        width: 100%;
        height: 100%;
-}*/
+}
 .pequeño{
        margin-left: 3rem;
        margin-right: 3rem;
@@ -141,11 +136,20 @@ h4.intro{
        text-align: center;
 }
 /*Estos son los estilos de los modales */
+.header-contacto{
+       background-color: #f78be0;
+}
+.body-contacto{
+       text-align: center;
+}
 .titulo{
        padding-bottom: 5%;
 }
 .modal-content, .modal-footer{       
        border-width: 0px;
+}
+.justificado{
+       text-align: justify;
 }
 #acercaDeMi{
        background-color: #9198a0;
@@ -161,72 +165,28 @@ h4.intro{
 }
 #proyectos{
        background-color: #bb1658;
+       text-align: justify;
 }   
-
-
-/*Estos son los estilos del footer */ 
-.botones-inferiores{
-       margin-left: 20px;
-       margin-right: 20px;
+.entreAmigas{
+       border-radius: 2mm;
 }
+.suscripcion{
+       background-color: #bb1658;
+}
+/*Estos son los estilos del footer */ 
 .pie-pagina{
       clear: both;
       width: 100%; 
-      height: 6rem;
+      height: 10rem;
 }
+.botones-inferiores{
+       margin-left: 14em;
+       
+}
+/* Estos son los estilos del copywrite*/
 .copywrite{
        margin-top: 5px;
        color: black;
        font-size: 1rem;
-       
+       text-align: center;
 }
-/*Estos son los estilos del login html */ 
-.ingreso{
-       padding-top: 10%;
-       padding-left: 30%;
-       padding-right: 30%;
-       
-}
-.login{
-       padding-left: 17%;
-      
-}
-.modal-dialog{
-       background-color: white;
-       color: black;
-       border-radius: 2%;
-}
-
-/*estos son los estilos del dashboard*/
-.unlocked{
-       margin-left: 70%;
-}
-h3.intro-dashboard{
-       margin-top: 18%;
-}
-.dashfooter{
-       
-       margin-left: 75%;
-}
-.container.text-center{
-       padding: 0%;
-       margin: 0%;
-}
-.dashbar{
-       background-color: white;
-       border-radius: 0%;
-       padding-left: 0%;
-       
-}
-.col-2{
-       padding: 0%;
-}
-.primero{
-       padding-top: 20%;
-}
-.ultimo{
-       padding-bottom: 20%;
-}
- h6.instrucciones{
-       padding-top: 5%;
- }   
