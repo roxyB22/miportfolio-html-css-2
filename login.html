@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="uft-8">
+<title>RoxyB login</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Porfolio web de Roxy-B Roxana Palacio">
+<meta name="author" content="RoxyB">
+<meta name="keywords" content="diseño web, roxyb, Roxy-B, roxy b, roxy bee,scrapbook digital, scrapbook, album fotos, invitaciones digitales">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/5a819552f9.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css"  href="assets/css/styleLogin.css">
+</head>
+<body>
+
+  
+<!-- Esta es la navbar superior -->
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid">
+<!-- Acá va el logo de argentina programa -->
+<a class="navbar-brand" name="volver" href="#"> 
+  <img src="assets/images/APLogo-20-20.png" alt="logo Argentina Programa"width="20%" height="">
+</a>
+        </div>
+    </nav>
+  
+<!-- Este es el banner superior   --> 
+<div class="banner" style="background-image: url('./assets/images/fondo1.jpg');">    
+  <div class="ingreso">
+      <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Inicio de sesión</h1>  
+      </div>
+     <!--Formulario de ingreso de sesión -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+      <!--input email -->
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+      <!--input contraseña -->
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+          <a href="dashboard.html" class="btn btn-dark submit">Ingresar</a>
+      </div>
+     <!-- Button trigger modal -->
+          <a href="" data-bs-toggle="modal" data-bs-target="#recuperoModal">¿Olvidaste tu contraseña?</a>
+</div>
+
+
+
+<!-- Modal recupero contraseña-->
+<div class="modal fade" id="recuperoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Recupero de contraseña</h1>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 centered">
+              <!--input email -->
+            <label for="exampleInputEmail1" class="form-label">Ingresá tu mail registrado</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3 centered">
+            <p>Te enviaremos las instrucciones</p>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+<!-- Este es el pie de página -->
+  <footer class="pie-pagina">
+    <nav class="navbar navbar-expand-lg bg-secondary">
+      <div class="container-fluid">
+<!-- Acá va una imagen embellishment        
+          <a class="navbar-brand" href="#">embellishment</a>--> 
+ <!-- Esto es el menú responsive que colapsa -->        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<!-- Esta es el botón de volver a la página anterior -->
+            <div class="fila">
+              <a href="index2.html"class="btn btn-dark botones-inferiores" role="button">volver a la página anterior</a>  
+            </div>
+          </div>
+      </div>
+      
+    </nav>
+  </footer>
+
+<!-- acá va el copywrite -->          
+<blockquote class="blockquote mb-0">
+  <div class="blockquote-footer copywrite"><cite title="Source Title">Made by Roxy-B, 2022 -</cite></div>
+</blockquote>      
+ 
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> 
+
+</body>
+</html>
